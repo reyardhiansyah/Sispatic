@@ -43,15 +43,15 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btn_idengejala"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    app:cardElevation="8dp"
-                    app:strokeWidth="0dp"
+                    android:layout_height="175dp"
                     android:layout_margin="16dp"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    app:cardElevation="8dp"
+                    app:strokeWidth="0dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:background="#BBDEFB"
                         android:gravity="center"
                         android:orientation="vertical"
@@ -76,15 +76,15 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btn_inforkerusakan"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardElevation="8dp"
-                    app:strokeWidth="0dp"
+                    android:layout_height="175dp"
                     android:layout_margin="16dp"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    app:cardElevation="8dp"
+                    app:strokeWidth="0dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:background="#BBDEFB"
                         android:gravity="center"
                         android:orientation="vertical"
@@ -115,17 +115,17 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btn_map"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:cardElevation="8dp"
-                    app:strokeWidth="0dp"
+                    android:layout_height="175dp"
                     android:layout_margin="16dp"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    app:cardElevation="8dp"
+                    app:strokeWidth="0dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
+                        android:layout_height="match_parent"
                         android:background="#BBDEFB"
+                        android:gravity="center"
                         android:orientation="vertical"
                         android:padding="16dp">
 
@@ -148,17 +148,17 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btn_riwayatDiagnosa"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:cardElevation="8dp"
-                    app:strokeWidth="0dp"
+                    android:layout_height="175dp"
                     android:layout_margin="16dp"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    app:cardElevation="8dp"
+                    app:strokeWidth="0dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
+                        android:layout_height="match_parent"
                         android:background="#BBDEFB"
+                        android:gravity="center"
                         android:orientation="vertical"
                         android:padding="16dp">
 
@@ -179,7 +179,7 @@
                 </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
 
-             <LinearLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -187,17 +187,17 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btn_inforpencegahan"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:cardElevation="8dp"
-                    app:strokeWidth="0dp"
+                    android:layout_height="175dp"
                     android:layout_margin="16dp"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    app:cardElevation="8dp"
+                    app:strokeWidth="0dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
+                        android:layout_height="match_parent"
                         android:background="#BBDEFB"
+                        android:gravity="center"
                         android:orientation="vertical"
                         android:padding="16dp">
 
@@ -220,17 +220,17 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btn_tentangaplikasi"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:cardElevation="8dp"
-                    app:strokeWidth="0dp"
+                    android:layout_height="175dp"
                     android:layout_margin="16dp"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    app:cardElevation="8dp"
+                    app:strokeWidth="0dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
+                        android:layout_height="match_parent"
                         android:background="#BBDEFB"
+                        android:gravity="center"
                         android:orientation="vertical"
                         android:padding="16dp">
 
