@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "479362084755",
+    "project_id": "sispakenmatic",
+    "storage_bucket": "sispakenmatic.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:479362084755:android:8e58752d76da6392558266",
+        "android_client_info": {
+          "package_name": "com.example.apk_sispakenmatic"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXOp2gcKRe7QoZJbg5ZWEsxGlSJisDy7U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
