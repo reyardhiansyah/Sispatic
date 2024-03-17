@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.apk_sispakenmatic.activities.DetailActivity
 import com.example.apk_sispakenmatic.adapters.InformationProtectAdapter
@@ -27,10 +28,14 @@ class InformasiPencegahan : AppCompatActivity() {
 
     private fun getDataFromCloud() {
         binding.apply {
+            loadIndicator.visibility = View.VISIBLE
+            rvInformasipencegahan.visibility = View.GONE
             db.collection("solusi")
                 .get()
                 .addOnCompleteListener {
                     if (it.isSuccessful) {
+                        loadIndicator.visibility = View.GONE
+                        rvInformasipencegahan.visibility = View.VISIBLE
                         arrayPencegahan = ArrayList()
                         for (document in it.result) {
                             arrayPencegahan.add(

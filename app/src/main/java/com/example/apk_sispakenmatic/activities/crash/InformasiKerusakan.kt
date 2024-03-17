@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.apk_sispakenmatic.activities.DetailActivity
 import com.example.apk_sispakenmatic.adapters.InformationDamageAdapter
@@ -28,10 +29,14 @@ class InformasiKerusakan : AppCompatActivity() {
 
     private fun getDataFromCloud() {
         binding.apply {
+            loadIndicator.visibility = View.VISIBLE
+            rvInformasikerusakan.visibility = View.GONE
             db.collection("solusi")
                 .get()
                 .addOnCompleteListener {
                     if (it.isSuccessful) {
+                        loadIndicator.visibility = View.GONE
+                        rvInformasikerusakan.visibility = View.VISIBLE
                         arraySolusi = ArrayList()
                         for (document in it.result) {
                             arraySolusi.add(
@@ -47,7 +52,8 @@ class InformasiKerusakan : AppCompatActivity() {
                         rvInformasikerusakan.layoutManager =
                             LinearLayoutManager(this@InformasiKerusakan)
                         rvInformasikerusakan.adapter = adapter
-                        adapter.onItemClickListener(object : InformationDamageAdapter.OnSolutionItemClickListener {
+                        adapter.onItemClickListener(object :
+                            InformationDamageAdapter.OnSolutionItemClickListener {
                             override fun onItemClick(solusi: Solusi) {
                                 startActivity(
                                     Intent(

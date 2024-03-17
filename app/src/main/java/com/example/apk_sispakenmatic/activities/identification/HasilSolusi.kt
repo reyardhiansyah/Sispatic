@@ -58,7 +58,8 @@ class HasilSolusi : AppCompatActivity() {
 
     private fun getDataFromCloud(solusi: String) {
         binding.apply {
-            dataLoadIndicator.visibility = View.VISIBLE
+            alayzingAnimation.visibility = View.VISIBLE
+            resultContainer.visibility = View.GONE
             db.collection("solusi")
                 .get()
                 .addOnCompleteListener {
@@ -71,6 +72,8 @@ class HasilSolusi : AppCompatActivity() {
                                     .get()
                                     .addOnCompleteListener { res ->
                                         if (res.isSuccessful) {
+                                            alayzingAnimation.visibility = View.GONE
+                                            resultContainer.visibility = View.VISIBLE
                                             arrayHarga = ArrayList()
                                             for (kota in res.result) {
                                                 arrayHarga.add(
@@ -80,7 +83,6 @@ class HasilSolusi : AppCompatActivity() {
                                                     )
                                                 )
                                             }
-                                            dataLoadIndicator.visibility = View.GONE
 
                                             // Array index -> 0, 1, 2, 3, 4, 5,..
                                             kota1.text = arrayHarga[0].name

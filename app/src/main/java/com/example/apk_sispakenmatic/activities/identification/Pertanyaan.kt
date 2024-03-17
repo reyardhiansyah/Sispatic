@@ -26,7 +26,7 @@ class Pertanyaan : AppCompatActivity() {
         gejala = if (Build.VERSION.SDK_INT > Build.VERSION_CODES.TIRAMISU) {
             intent.getParcelableExtra("GEJALA", ArrayGejala::class.java)!!
         } else {
-            intent.getParcelableExtra<ArrayGejala>("GEJALA")!!
+            intent.getParcelableExtra("GEJALA")!!
         }
 
         binding.apply {

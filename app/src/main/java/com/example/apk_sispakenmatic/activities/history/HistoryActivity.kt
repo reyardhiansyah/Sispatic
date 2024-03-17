@@ -44,17 +44,18 @@ class HistoryActivity : AppCompatActivity() {
 
                 override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                     loadIndicator.visibility = View.VISIBLE
+                    historyRv.visibility = View.GONE
                     db.collection("riwayat")
                         .document(arrayRiwayat[viewHolder.adapterPosition].id)
                         .delete()
-                        .addOnCompleteListener {taskWrite ->
+                        .addOnCompleteListener { taskWrite ->
                             if (taskWrite.isSuccessful) {
-                                /*arrayRiwayat.removeAt(viewHolder.adapterPosition)
-                                adapter.notifyItemRemoved(viewHolder.adapterPosition)*/
                                 loadIndicator.visibility = View.GONE
+                                historyRv.visibility = View.VISIBLE
                                 Toast.makeText(
                                     this@HistoryActivity,
-                                    "Data Berhasil Dihapus!", Toast.LENGTH_SHORT).show()
+                                    "Data Berhasil Dihapus!", Toast.LENGTH_SHORT
+                                ).show()
                                 getDataFromCloud()
                             }
                         }
@@ -66,11 +67,13 @@ class HistoryActivity : AppCompatActivity() {
     private fun getDataFromCloud() {
         binding.apply {
             loadIndicator.visibility = View.VISIBLE
+            historyRv.visibility = View.GONE
             db.collection("riwayat")
                 .get()
                 .addOnCompleteListener {
                     if (it.isSuccessful) {
                         loadIndicator.visibility = View.GONE
+                        historyRv.visibility = View.VISIBLE
                         arrayRiwayat = ArrayList()
                         for (document in it.result) {
                             arrayRiwayat.add(
